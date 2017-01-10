@@ -1,3 +1,8 @@
 spring:
   application:
     name: zhengshitech-eureka-client-verb
+  cloud:
+    config:
+      uri:  http://localhost:8001
+      env:  default
+      label: spring-demo-eureka-config-server

@@ -1,3 +1,12 @@
+server:
+  port: 8002
+
 spring:
   application:
-    name: zhengshitech-eureka-client-subject
+    name: hello-config-client
+  cloud:
+    config:
+      uri:  http://localhost:9999
+      env:  default
+      label: master
+words: 你,我,他
