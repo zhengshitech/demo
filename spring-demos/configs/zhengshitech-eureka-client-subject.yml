@@ -1,2 +1,6 @@
----
-lucky-word: hello my dear,now i am modified...
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+
+words: 你,我,他
