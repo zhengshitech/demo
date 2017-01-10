@@ -3,4 +3,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:9999/eureka
 
-words: 你,我,他
+words: You,I,He
