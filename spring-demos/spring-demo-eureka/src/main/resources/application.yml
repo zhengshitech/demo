@@ -1,0 +1,26 @@
+#success
+#server:
+#  port: 8761
+#
+#spring:
+#  application:
+#    name: zhengshitech-eureka-server
+#
+#eureka:
+#  client:
+#      register-with-eureka: true
+#      fetch-registry: true
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: zhengshitech-eureka-server
+
+eureka:
+  client:
+      register-with-eureka: true
+      fetch-registry: true
+      service-url:
+            defaultZone: http://localhost:8888/eureka
