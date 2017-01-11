@@ -6,7 +6,7 @@ eureka:
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-actioins: 吃饭,睡觉,打架
+actioins: Eating,Dancing,Gaming
 
 server:
   port: ${PORT:${SERVER_PORT:0}}

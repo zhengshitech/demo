@@ -13,6 +13,10 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-config-server')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+
+    compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
