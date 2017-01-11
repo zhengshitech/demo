@@ -15,9 +15,9 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 
+    compile('org.springframework.cloud:spring-cloud-starter-ribbon')
 
-    compile('org.springframework.cloud:spring-cloud-starter-feign')
-    compile project(':client-subject-slave')
+
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

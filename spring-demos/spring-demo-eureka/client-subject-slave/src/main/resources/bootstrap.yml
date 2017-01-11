@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zhengshitech-eureka-client-subject
+  cloud:
+    config:
+      uri:  http://localhost:8888
+      env:  default
+      label: master
+
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+#  这个的意思是随机指定个没使用的端口

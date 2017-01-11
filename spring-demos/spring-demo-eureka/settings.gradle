@@ -2,4 +2,4 @@ include 'client-subject'
 include 'client-verb'
 include 'make-sentence'
 include 'client-verb-slave'
-
+include 'client-subject-slave'

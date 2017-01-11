@@ -2,14 +2,13 @@ package tech.zhengshi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import tech.zhengshi.webapi.SubjectClient;
 
 import java.net.URI;
-import java.util.List;
 
 /**
  * Created by zhengqiang on 2017/1/10 15:47.
@@ -22,6 +21,10 @@ public class MakeSentence {
 //    DiscoveryClient client;
     @Autowired
     LoadBalancerClient client;
+
+    @Autowired
+    SubjectClient subjectClient;
+
 
     @RequestMapping("/sentence")
     public String getSentence() {
@@ -44,6 +47,17 @@ public class MakeSentence {
 //        }
 //        return null;
 //    }
+
+
+
+    @RequestMapping("/sentenceV2")
+    public String sentenceV2() {
+        String subject = subjectClient.getWord();
+        String action = getWord("zhengshitech-eureka-client-verb");
+        String sentence = subject + " " + action + ".";
+        System.out.println(sentence);
+        return sentence;//大小写不区分
+    }
 
 
     public String getWord(String service) {
