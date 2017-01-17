@@ -1,5 +1,6 @@
 package tech.zhengshi;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -27,6 +28,7 @@ public class MakeSentence {
 
 
     @RequestMapping("/sentence")
+//    @HystrixCommand(fallbackMethod="getFallbackSubject")
     public String getSentence() {
         String subject = getWord("zhengshitech-eureka-client-subject");
         String action = getWord("zhengshitech-eureka-client-verb");
@@ -34,6 +36,12 @@ public class MakeSentence {
         System.out.println(sentence);
         return sentence;//大小写不区分
     }
+
+
+    public static final String getFallbackSubject(){
+        return "make sentence error!";
+    }
+
 //
 //    public String getWord(String service) {
 //        List<ServiceInstance> list = client.getInstances(service);
@@ -50,6 +58,7 @@ public class MakeSentence {
 
 
 
+    @HystrixCommand(fallbackMethod="getFallbackSubject")
     @RequestMapping("/sentenceV2")
     public String sentenceV2() {
         String subject = subjectClient.getWord();
