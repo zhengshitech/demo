@@ -6,4 +6,12 @@ eureka:
   instance:
     prefer-ip-address: true
 
+spring:
+  cloud:
+    config:
+      uri:  http://config.zhengshi.tech:8888
+      env:  default
+      label: master
+      name: web-service-subject
+
 words: You,I,He
