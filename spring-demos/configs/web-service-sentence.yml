@@ -1,4 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://registry:8761/eureka
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
