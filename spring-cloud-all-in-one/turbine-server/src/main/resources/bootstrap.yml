@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: Turbine-Server
+  cloud:
+    stream:
+      bindings:
+        output:
+          consumer:
+            prefix: z
+        input:
+          group: default
+#  cloud:
+#    config:
+#      enabled: true
+#      discovery:
+#        enabled: true
+#        serviceId: ConfigServer

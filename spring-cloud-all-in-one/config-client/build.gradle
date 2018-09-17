@@ -1,0 +1,10 @@
+dependencies {
+
+    //config client
+    compile('org.springframework.boot:spring-boot-starter-amqp')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.cloud:spring-cloud-starter-config')
+    //test
+    compile('org.springframework.boot:spring-boot-starter-test')
+    compile 'junit:junit:4.12'
+}

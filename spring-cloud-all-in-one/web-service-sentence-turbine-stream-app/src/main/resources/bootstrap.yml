@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      uri:  http://config.zhengshi.tech:8888
+      label: master
+      name: web-service-subject
+
+
+feign:
+  hystrix:
+    enabled: true
+

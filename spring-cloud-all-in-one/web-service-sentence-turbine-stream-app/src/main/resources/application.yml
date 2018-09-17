@@ -1,0 +1,46 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      cluster:  ZQWEBAPI
+
+
+
+server:
+  port: 6004
+
+spring:
+  application:
+    name: web-service-sentence-turbine-client-app
+  rabbitmq:
+    host: rabbitmq.zhengshi.tech
+    username: demo
+    password: demo
+
+
+management:
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
+
+#debug: true
+
+hystrix:
+  stream:
+    queue:
+      enabled: true
+#      content-type: text/plain
+#      content-type: application/json
+#      destination: springCloudHystrixStream
+
+  metrics:
+    enabled: true
+#logging:
+#  level:
+#    org.springframework.amqp: debug
+

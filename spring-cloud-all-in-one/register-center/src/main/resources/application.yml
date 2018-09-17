@@ -1,0 +1,28 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+
+#success
+#server:
+#  port: 8761
+#
+#spring:
+#  application:
+#    name: zhengshitech-eureka-server
+#
+#eureka:
+#  client:
+#      register-with-eureka: true
+#      fetch-registry: true
+server:
+  port: 8761
+
+spring:
+  application:
+    name: register-center
+

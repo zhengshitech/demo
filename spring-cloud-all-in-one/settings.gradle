@@ -1,0 +1,24 @@
+rootProject.name = 'spring-cloud-all-in-one'
+
+include 'config-server'
+include 'config-client'
+include 'register-center'
+include 'gateway-server'
+include 'monitor-server'
+include 'turbine-server'
+
+include 'web-service-subject-api'
+include 'web-service-subject'
+
+include 'web-service-verb-api'
+include 'web-service-verb'
+
+include 'web-service-sentence-api'
+include 'web-service-sentence'
+
+include 'turbine-stream-server'
+include 'web-service-sentence-turbine-stream-app'
+
+include 'web-utils'
+include 'dash-board'
+

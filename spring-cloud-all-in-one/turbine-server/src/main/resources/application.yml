@@ -1,0 +1,29 @@
+server:
+  port: 9999
+
+info:
+  component: Turbine Server
+
+turbine:
+  aggregator:
+    clusterConfig: ZQWEBAPI
+  appConfig: WEB-SERVICE-SENTENCE-APP
+#  clusterNameExpression: "'default'"
+  clusterNameExpression: metadata['cluster']
+  InstanceMonitor:
+    eventStream:
+      skipLineLogic:
+        enabled: false
+#  stream:
+#    port: 8989
+#    destination: zq_hystrix_stream.output
+#    content-type: "application/json"
+#logging:
+#  level:
+#    org.springframework.integration: debug
+#    io.reactivex: debug
+#    org.springframework.integration: debug
+#    com.netflix.turbine: debug
+#    io.netty: debug
+#    org.springframework.cloud.netflix.turbine: debug
+#    org.springframework.amqp.rabbit: debug

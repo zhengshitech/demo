@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+
+
+server:
+  port: 6001
+#logging:
+#  level:
+#    com.netflix.discovery: debug
+hystrix:
+  metrics:
+    enabled: true
+#  这个的意思是随机指定个没使用的端口

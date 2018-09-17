@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: web-service-subject-app
+  cloud:
+    config:
+      uri:  http://config.zhengshi.tech:8888
+      label: master
+      name: web-service-subject
+
+#logging:
+#  level:
+#    org.springframework.cloud.config: debug
+

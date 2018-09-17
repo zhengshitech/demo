@@ -1,0 +1,39 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+
+info:
+  component: Turbine Server
+
+server:
+  port: 1688
+
+spring:
+  application:
+    name: turbine-stream-server
+
+turbine:
+  stream:
+    port: 8889
+#    content-type: text/plain
+#  aggregator:
+#    clusterConfig: ZQWEBAPI
+#  appConfig: WEB-SERVICE-SENTENCE-TURBINE-CLIENT-APP
+##  clusterNameExpression: "'default'"
+#  clusterNameExpression: metadata['cluster']
+
+logging:
+  level:
+#    org.springframework.integration: debug
+#    com.fasterxml.jackson: debug
+    io.netty: debug
+#    org.springframework.cloud.netflix.turbine: debug
+#    org.springframework.amqp.rabbit: debug
+hystrix:
+  metrics:
+    enabled: true

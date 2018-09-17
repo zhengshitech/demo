@@ -1,0 +1,35 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      cluster:  ZQWEBAPI
+
+
+
+server:
+  port: 6003
+
+spring:
+  application:
+    name: web-service-sentence-app
+
+
+management:
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
+#
+#logging:
+#  level:
+#    com.netflix.hystrix: debug
+
+
+
+#logging:
+#  level:
+#    org.springframework.beans: debug

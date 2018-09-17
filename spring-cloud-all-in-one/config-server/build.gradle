@@ -1,0 +1,11 @@
+dependencies {
+
+    //config server
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.cloud:spring-cloud-config-server')
+    compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    //test
+    compile('org.springframework.boot:spring-boot-starter-test')
+    compile 'junit:junit:4.12'
+}

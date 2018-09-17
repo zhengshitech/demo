@@ -1,0 +1,31 @@
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://registry.zhengshi.tech:8761/eureka
+#    prefer-same-zone-eureka: true
+#  instance:
+#    prefer-ip-address: true
+
+server:
+  port: 8889
+
+spring:
+  application:
+    name: hello-config-client-app
+  cloud:
+    config:
+      uri:  http://config.zhengshi.tech:8888
+      env:  default
+      label: master
+      name: hello-config-client
+      fail-fast: true
+  rabbitmq:
+    password: demo
+    username: demo
+    host: rabbitmq.zhengshi.tech
+health:
+  config:
+    enabled: true
+#logging:
+#  level:
+#    org.springframework: debug

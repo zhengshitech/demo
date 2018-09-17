@@ -1,0 +1,34 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhengshitech/zhengshi.tech-demos
+          searchPaths: spring-demos/configs
+  rabbitmq:
+    host: rabbitmq.zhengshi.tech
+    username: demo
+    password: demo
+
+test:
+  encrypt:
+    password: '{cipher}ea9fc2e5be5d6211bbccd1324a2a129253e75d976bd69aabffbddfaec162ffae'
+
+#logging:
+#  level:
+#    com.netflix.discovery: debug

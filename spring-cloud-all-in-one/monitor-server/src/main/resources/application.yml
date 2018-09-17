@@ -1,0 +1,40 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry.zhengshi.tech:8761/eureka
+    prefer-same-zone-eureka: true
+  instance:
+    prefer-ip-address: true
+
+
+server:
+  port: 6789
+#  servlet:
+#    context-path: /my2
+
+spring:
+  application:
+    name: monitor-server
+
+management:
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
+  server:
+    servlet:
+      context-path: mymonitor
+hystrix:
+  metrics:
+    enabled: true
+
+logging:
+  level:
+    com.netflix.hystrix: debug
+
+
+
+
+#logging:
+#  level:
+#    root: debug
